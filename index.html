@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Adega Premium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Lado esquerdo (cards) */
+    .sidebar {
+      width: 280px;
+      background: #1a1a1a;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .card {
+      background: #222;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Conteúdo principal */
+    .main {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .main h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .main p {
+      color: #ccc;
+    }
+
+    /* Cardápio */
+    .menu {
+      margin-top: 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05);
+      background: #2a2a2a;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .menu-item h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+    }
+
+    .price {
+      color: #00ff88;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    /* Botão WhatsApp */
+    .btn {
+      display: block;
+      margin-top: 10px;
+      padding: 10px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1ebe5d;
+      transform: scale(1.05);
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .card {
+        min-width: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Cards laterais -->
+    <div class="sidebar">
+      <div class="card">
+        <a href="https://www.ifood.com.br" target="_blank">🍔 iFood</a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.ze.delivery" target="_blank">🍺 Zé Delivery</a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.instagram.com" target="_blank">📸 Instagram</a>
+      </div>
+
+      <div class="card">
+        <a href="https://w.app/chuletinha" target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="main">
+      <h1>Adega Premium</h1>
+      <p>As melhores bebidas da cidade, entrega rápida e gelada 🍻</p>
+
+      <!-- Cardápio -->
+      <div class="menu">
+        <h2>🍹 Cardápio</h2>
+
+        <div class="menu-grid">
+
+          <div class="menu-item">
+            <img src="https://via.placeholder.com/200" alt="Cerveja">
+            <h3>Cerveja Heineken</h3>
+            <p class="price">R$ 8,00</p>
+            <a class="btn" href="https://wa.me/5551999999999?text=Quero%20pedir%20Heineken" target="_blank">
+              Pedir no WhatsApp
+            </a>
+          </div>
+
+          <div class="menu-item">
+            <img src="https://via.placeholder.com/200" alt="Whisky">
+            <h3>Whisky Jack Daniel's</h3>
+            <p class="price">R$ 120,00</p>
+            <a class="btn" href="https://wa.me/5551999999999?text=Quero%20pedir%20Whisky%20Jack%20Daniels" target="_blank">
+              Pedir no WhatsApp
+            </a>
+          </div>
+
+          <div class="menu-item">
+            <img src="https://via.placeholder.com/200" alt="Vodka">
+            <h3>Vodka Smirnoff</h3>
+            <p class="price">R$ 45,00</p>
+            <a class="btn" href="https://wa.me/5551999999999?text=Quero%20pedir%20Vodka%20Smirnoff" target="_blank">
+              Pedir no WhatsApp
+            </a>
+          </div>
+
+          <div class="menu-item">
+            <img src="https://via.placeholder.com/200" alt="Vinho">
+            <h3>Vinho Tinto</h3>
+            <p class="price">R$ 60,00</p>
+            <a class="btn" href="https://wa.me/5551999999999?text=Quero%20pedir%20Vinho%20Tinto" target="_blank">
+              Pedir no WhatsApp
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
